@@ -696,14 +696,14 @@
   .hero-title {
     font-size: 3rem;
   }
-  
+
   .hero-container,
   .benefits-grid,
   .tech-container,
   .footer-container {
     gap: 3rem;
   }
-  
+
   .section-header h2,
   .cta-container h2 {
     font-size: 2.25rem;
@@ -716,11 +716,11 @@
   .menu-toggle {
     display: flex;
   }
-  
+
   .auth-buttons {
     display: none;
   }
-  
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -737,14 +737,14 @@
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 999;
   }
-  
+
   .nav-link {
     font-size: 1.1rem;
     width: 100%;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--border-color);
   }
-  
+
   .mobile-auth-buttons {
     display: flex;
     flex-direction: column;
@@ -752,13 +752,13 @@
     width: 100%;
     margin-top: 1.5rem;
   }
-  
+
   .mobile-auth-buttons .btn-login {
     text-align: center;
     padding: 0.75rem;
     font-weight: 700;
   }
-  
+
   .mobile-auth-buttons .btn-signup {
     width: 100%;
   }
@@ -780,49 +780,49 @@
     text-align: center;
     gap: 3.5rem;
   }
-  
+
   .hero-content {
     align-items: center;
   }
-  
+
   .hero-desc {
     margin: 0 auto;
   }
-  
+
   .hero-actions {
     justify-content: center;
     width: 100%;
   }
-  
+
   .benefits-grid {
     grid-template-columns: 1fr;
     gap: 3.5rem;
   }
-  
+
   .tech-container {
     grid-template-columns: 1fr;
     gap: 3.5rem;
   }
-  
+
   .tech-content {
     align-items: center;
     text-align: center;
   }
-  
+
   .tech-features {
     align-items: flex-start;
     margin: 0.5rem auto 0 auto;
   }
-  
+
   .footer-container {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+
   .footer-links-grid {
     gap: 2rem;
   }
-  
+
   .validation-card {
     bottom: -1rem;
     left: 1rem;
@@ -834,43 +834,158 @@
   .hero-title {
     font-size: 2.25rem;
   }
-  
+
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .btn-large {
     width: 100%;
   }
-  
+
   .section-header h2,
   .tech-title,
   .cta-container h2 {
     font-size: 1.85rem;
   }
-  
+
   .benefit-card {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
-  
+
   .footer-links-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  
+
   .footer-bottom {
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
   }
-  
+
   .validation-card {
     position: relative;
     bottom: 0;
     left: 0;
     margin: 1rem auto 0 auto;
+  }
+}
+
+/* --- New Parky CTA & Material Form Section --- */
+.parky-cta-section {
+  padding: 7rem 0;
+  background: radial-gradient(circle at center, rgba(16, 185, 129, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cta-container-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.cta-text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.cta-text-content h2 {
+  font-size: 2.75rem;
+  color: var(--primary-dark);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.cta-text-content p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0;
+}
+
+.main-cta-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.cta-form-card {
+  flex: 1;
+  background: var(--bg-white, #ffffff);
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 450px;
+  box-sizing: border-box;
+}
+
+.cta-form-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+}
+
+.form-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.static-lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.full-width-field {
+  width: 100%;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .cta-text-content h2 {
+    font-size: 2.25rem;
+  }
+  .cta-container-layout {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-container-layout {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+  .cta-text-content {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-text-content h2 {
+    font-size: 1.85rem;
+  }
+  .cta-form-card {
+    padding: 1.5rem;
   }
 }

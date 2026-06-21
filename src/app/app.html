@@ -12,7 +12,7 @@
       <a href="#conductores" class="nav-link" (click)="closeMenu()">Para Conductores</a>
       <a href="#propietarios" class="nav-link" (click)="closeMenu()">Para Propietarios</a>
       <a href="#tecnologia" class="nav-link" (click)="closeMenu()">Tecnología</a>
-      
+
       <!-- Mobile Auth Buttons -->
       <div class="mobile-auth-buttons">
         <a href="#" class="btn-login" (click)="closeMenu()">Iniciar Sesión</a>
@@ -47,16 +47,16 @@
           </svg>
           Impulsado por IA
         </div>
-        
+
         <h1 class="hero-title">
           Estacionamiento <br>
           <span class="highlight-text">Inteligente</span> y Seguro
         </h1>
-        
+
         <p class="hero-desc">
           Conectamos dueños de cocheras privadas con conductores usando Inteligencia Artificial y visión por computadora en tiempo real para una experiencia sin fricciones.
         </p>
-        
+
         <div class="hero-actions">
           <a href="#" class="btn btn-primary btn-large btn-download">
             <svg viewBox="0 0 24 24" width="20" height="20">
@@ -72,12 +72,12 @@
           </a>
         </div>
       </div>
-      
+
       <!-- Hero Right: Interactive Visual & Floating Alert -->
       <div class="hero-visual">
         <div class="image-wrapper">
           <img src="images/smart_garage.png" alt="Futuristic Smart Garage" class="garage-img">
-          
+
           <!-- Floating Validation Card -->
           <div class="validation-card floating-card">
             <div class="validation-icon">
@@ -229,7 +229,7 @@
         </div>
 
         <h2 class="tech-title">Visión por Computadora <br>en Tiempo Real</h2>
-        
+
         <p class="tech-desc">
           Nuestras cámaras inteligentes, potenciadas por modelos avanzados de Inteligencia Artificial, validan automáticamente la disponibilidad de los espacios.
         </p>
@@ -267,14 +267,14 @@
         <div class="feed-wrapper">
           <div class="feed-container">
             <img src="images/smart_garage.png" alt="Smart Garage Vision Analytics" class="feed-img">
-            
+
             <!-- Real-time CSS AI Detection Overlay -->
             <div class="detection-overlay">
               <div class="detection-box">
                 <span class="detection-label">VEHÍCULO DETECTADO - 99.8%</span>
               </div>
             </div>
-            
+
             <!-- Animated scanner line -->
             <div class="scanner-line"></div>
           </div>
@@ -283,12 +283,37 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container cta-container">
-      <h2>¿Listo para transformar la forma en que estacionas?</h2>
-      <p>Únete a miles de usuarios que ya ahorran tiempo y dinero con Parky.</p>
-      <a href="#" class="btn btn-secondary btn-large btn-cta-main">Comenzar Ahora</a>
+  <section class="parky-cta-section">
+    <div class="container cta-container-layout">
+
+      <div class="cta-text-content">
+        <h2>¿Listo para transformar la forma en que estacionas?</h2>
+        <p>Únete a Parky hoy mismo y descubre la comodidad de encontrar estacionamiento al instante sin complicaciones.</p>
+        <button mat-raised-button color="primary" class="btn btn-primary main-cta-btn">
+          ¡Regístrate Ahora!
+        </button>
+      </div>
+
+      <div class="cta-form-card">
+        <h3>Déjanos tus datos</h3>
+        <p class="form-subtitle">Te avisaremos en cuanto estemos en tu zona.</p>
+
+        <form class="static-lead-form">
+          <mat-form-field appearance="outline" class="full-width-field">
+            <mat-label>Nombre completo</mat-label>
+            <input matInput placeholder="Ej. Juan Pérez">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width-field">
+            <mat-label>Correo electrónico</mat-label>
+            <input matInput type="email" placeholder="ejemplo@correo.com">
+          </mat-form-field>
+
+          <button mat-flat-button color="accent" class="btn btn-primary submit-btn" type="button">
+            Enviar Información
+          </button>
+        </form>
+      </div>
     </div>
   </section>
 </main>
@@ -305,7 +330,7 @@
         Revolucionando el estacionamiento urbano mediante Inteligencia Artificial y economía colaborativa.
       </p>
     </div>
-    
+
     <div class="footer-links-grid">
       <!-- Product Links -->
       <div class="footer-col">
@@ -317,7 +342,7 @@
           <li><a href="#tecnologia">Tecnología</a></li>
         </ul>
       </div>
-      
+
       <!-- Support Links -->
       <div class="footer-col">
         <h3>Soporte</h3>
@@ -330,10 +355,10 @@
       </div>
     </div>
   </div>
-  
+
   <div class="container footer-bottom">
     <p class="copyright">© 2026 Parky. Todos los derechos reservados.</p>
-    
+
     <div class="social-links">
       <!-- Instagram -->
       <a href="#" aria-label="Instagram">
