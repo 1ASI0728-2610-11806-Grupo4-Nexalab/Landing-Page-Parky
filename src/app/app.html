@@ -1,0 +1,355 @@
+<!-- Header / Navigation Bar -->
+<header class="header">
+  <div class="container header-container">
+    <!-- Logo -->
+    <a href="#" class="logo" (click)="closeMenu()">
+      <span class="logo-icon">P</span>
+      <span class="logo-text">Parky</span>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="nav-links" [class.nav-active]="isMenuOpen()">
+      <a href="#conductores" class="nav-link" (click)="closeMenu()">Para Conductores</a>
+      <a href="#propietarios" class="nav-link" (click)="closeMenu()">Para Propietarios</a>
+      <a href="#tecnologia" class="nav-link" (click)="closeMenu()">Tecnología</a>
+      
+      <!-- Mobile Auth Buttons -->
+      <div class="mobile-auth-buttons">
+        <a href="#" class="btn-login" (click)="closeMenu()">Iniciar Sesión</a>
+        <a href="#" class="btn btn-primary btn-signup" (click)="closeMenu()">Registrarse</a>
+      </div>
+    </nav>
+
+    <!-- Desktop Auth Buttons -->
+    <div class="auth-buttons">
+      <a href="#" class="btn-login">Iniciar Sesión</a>
+      <a href="#" class="btn btn-primary btn-signup">Registrarse</a>
+    </div>
+
+    <!-- Hamburger Menu Toggle Button for Mobile -->
+    <button type="button" class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle navigation" [class.open]="isMenuOpen()">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <!-- Hero Left: Text Content -->
+      <div class="hero-content">
+        <div class="badge badge-cyan">
+          <svg class="icon-sparkle" viewBox="0 0 24 24" width="16" height="16">
+            <path fill="currentColor" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/>
+          </svg>
+          Impulsado por IA
+        </div>
+        
+        <h1 class="hero-title">
+          Estacionamiento <br>
+          <span class="highlight-text">Inteligente</span> y Seguro
+        </h1>
+        
+        <p class="hero-desc">
+          Conectamos dueños de cocheras privadas con conductores usando Inteligencia Artificial y visión por computadora en tiempo real para una experiencia sin fricciones.
+        </p>
+        
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary btn-large btn-download">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M17,1H7A2,2 0 0,0 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,19V3A2,2 0 0,0 17,1M17,19H7V5H17V19M16,13H13V8H11V13H8L12,17L16,13Z"/>
+            </svg>
+            Descargar App
+          </a>
+          <a href="#" class="btn btn-outline-primary btn-large btn-rent">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"/>
+            </svg>
+            Alquilar mi Cochera
+          </a>
+        </div>
+      </div>
+      
+      <!-- Hero Right: Interactive Visual & Floating Alert -->
+      <div class="hero-visual">
+        <div class="image-wrapper">
+          <img src="images/smart_garage.png" alt="Futuristic Smart Garage" class="garage-img">
+          
+          <!-- Floating Validation Card -->
+          <div class="validation-card floating-card">
+            <div class="validation-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/>
+              </svg>
+            </div>
+            <div class="validation-info">
+              <h4>Espacio Validado</h4>
+              <p>Hace 2 segundos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="benefits-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Beneficios para todos</h2>
+        <p>Una plataforma diseñada para maximizar el valor tanto para quienes buscan estacionar como para quienes tienen un espacio libre.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <!-- Column 1: Para Conductores -->
+        <div id="conductores" class="benefit-col">
+          <div class="col-title-badge drivers-badge">
+            <div class="badge-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <path fill="currentColor" d="M18.92 11L18.06 8.5C17.79 7.7 17.03 7.17 16.14 7.17H7.86C6.97 7.17 6.21 7.7 5.94 8.5L5.08 11C4.44 11.58 4 12.42 4 13.38V19.5C4 20.33 4.67 21 5.5 21H6.5C7.33 21 8 20.33 8 19.5V18.5H16V19.5C16 20.33 16.67 21 17.5 21H18.5C19.33 21 20 20.33 20 19.5V13.38C20 12.42 19.56 11.58 18.92 11M6.85 9H17.15L17.8 11H6.2L6.85 9M7.5 16C6.67 16 6 15.33 6 14.5S6.67 13 7.5 13 9 13.67 9 14.5 8.33 16 7.5 16M16.5 16C15.67 16 15 15.33 15 14.5S15.67 13 16.5 13 18 13.67 18 14.5 17.33 16 16.5 16Z"/>
+              </svg>
+            </div>
+            <h3>Para Conductores</h3>
+          </div>
+
+          <div class="benefit-cards">
+            <!-- Card 1 -->
+            <div class="benefit-card">
+              <div class="card-icon-wrapper blue-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/>
+                </svg>
+              </div>
+              <div class="card-content">
+                <h4>Ahorro de Tiempo</h4>
+                <p>Encuentra y reserva tu lugar en segundos. Sin dar vueltas buscando dónde estacionar.</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="benefit-card">
+              <div class="card-icon-wrapper blue-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="currentColor" d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.1 14.8,9.5C14.8,11 13,13 12,14C11,13 9.2,11 9.2,9.5C9.2,8.1 10.6,7 12,7M12,17C10.3,17 8,17.8 8,18.7V19.7H16V18.7C16,17.8 13.7,17 12,17Z"/>
+                </svg>
+              </div>
+              <div class="card-content">
+                <h4>Seguridad Garantizada</h4>
+                <p>Cocheras privadas y verificadas. Tu vehículo está seguro lejos de la calle.</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="benefit-card">
+              <div class="card-icon-wrapper blue-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="currentColor" d="M20,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6A2,2 0 0,0 20,4M20,11H4V8H20V11M20,18H4V14H20V18Z"/>
+                </svg>
+              </div>
+              <div class="card-content">
+                <h4>Pagos Sin Fricción</h4>
+                <p>Pago automático al salir. Olvídate del efectivo y los tickets perdidos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Para Propietarios -->
+        <div id="propietarios" class="benefit-col">
+          <div class="col-title-badge owners-badge">
+            <div class="badge-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <path fill="currentColor" d="M17,18H7V16H17V18M17,14H7V12H17V14M17,10H7V8H17V10M19,3H15.82C15.4,1.84 14.3,1 13,1C11.7,1 10.6,1.84 10.18,3H7A2,2 0 0,0 5,5V21A2,2 0 0,0 7,23H19A2,2 0 0,0 21,21V5A2,2 0 0,0 19,3M13,3A1,1 0 0,1 14,4A1,1 0 0,1 13,5A1,1 0 0,1 12,4A1,1 0 0,1 13,3M19,21H7V5H9V8H17V5H19V21Z"/>
+              </svg>
+            </div>
+            <h3>Para Propietarios</h3>
+          </div>
+
+          <div class="benefit-cards">
+            <!-- Card 1 -->
+            <div class="benefit-card">
+              <div class="card-icon-wrapper green-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="currentColor" d="M16,6L18.29,8.29L13.41,13.17L9.41,9.17L2,16.59L3.41,18L9.41,12L13.41,16L19.71,9.71L22,12V6H16Z"/>
+                </svg>
+              </div>
+              <div class="card-content">
+                <h4>Ingresos Pasivos</h4>
+                <p>Monetiza tu espacio libre sin esfuerzo. Recibe pagos directamente en tu cuenta.</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="benefit-card">
+              <div class="card-icon-wrapper green-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="currentColor" d="M3,17H5V21H3V17M9,11H11V21H9V11M15,5H17V21H15V5M21,13H23V21H21V13M3,13H5V15H3V13M9,7H11V9H9V7M15,1H17V3H15V1M21,7H23V9H21V7Z"/>
+                </svg>
+              </div>
+              <div class="card-content">
+                <h4>Control Total</h4>
+                <p>Tú decides los días y horarios en los que tu cochera está disponible.</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="benefit-card">
+              <div class="card-icon-wrapper green-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="currentColor" d="M7 2V13H10V22L17 10H13L17 2H7Z"/>
+                </svg>
+              </div>
+              <div class="card-content">
+                <h4>Cero Esfuerzo</h4>
+                <p>Nuestra IA gestiona la disponibilidad en tiempo real. No tienes que hacer nada.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Computer Vision Section -->
+  <section id="tecnologia" class="tech-section">
+    <div class="container tech-container">
+      <!-- Left Column: Text Info -->
+      <div class="tech-content">
+        <div class="badge badge-dark-blue">
+          <svg viewBox="0 0 24 24" width="16" height="16">
+            <path fill="currentColor" d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.47,5.34 14.86,5.08L14.47,2.42C14.43,2.18 14.22,2 13.97,2H9.97C9.72,2 9.51,2.18 9.47,2.42L9.08,5.08C8.47,5.34 7.9,5.66 7.38,6.05L4.89,5.05C4.67,4.96 4.4,5.05 4.28,5.27L2.28,8.73C2.16,8.95 2.21,9.22 2.4,9.37L4.51,11C4.47,11.34 4.44,11.67 4.44,12C4.44,12.33 4.47,12.65 4.51,12.97L2.4,14.63C2.21,14.78 2.16,15.05 2.28,15.27L4.28,18.73C4.4,18.95 4.67,19.04 4.89,18.95L7.38,17.95C7.9,18.34 8.47,18.66 9.08,18.92L9.47,21.58C9.51,21.82 9.72,22 9.97,22H13.97C14.22,22 14.43,21.82 14.47,21.58L14.86,18.92C15.47,18.66 16.04,18.34 16.56,17.95L19.05,18.95C19.27,19.04 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z"/>
+          </svg>
+          Tecnología Propietaria
+        </div>
+
+        <h2 class="tech-title">Visión por Computadora <br>en Tiempo Real</h2>
+        
+        <p class="tech-desc">
+          Nuestras cámaras inteligentes, potenciadas por modelos avanzados de Inteligencia Artificial, validan automáticamente la disponibilidad de los espacios.
+        </p>
+
+        <ul class="tech-features">
+          <li>
+            <span class="check-icon">
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/>
+              </svg>
+            </span>
+            Detección de patentes instantánea
+          </li>
+          <li>
+            <span class="check-icon">
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/>
+              </svg>
+            </span>
+            Actualización de disponibilidad al segundo
+          </li>
+          <li>
+            <span class="check-icon">
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/>
+              </svg>
+            </span>
+            Alertas de seguridad automáticas
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Visual Camera Feed with Overlaid Detection Bounding Box -->
+      <div class="tech-visual">
+        <div class="feed-wrapper">
+          <div class="feed-container">
+            <img src="images/smart_garage.png" alt="Smart Garage Vision Analytics" class="feed-img">
+            
+            <!-- Real-time CSS AI Detection Overlay -->
+            <div class="detection-overlay">
+              <div class="detection-box">
+                <span class="detection-label">VEHÍCULO DETECTADO - 99.8%</span>
+              </div>
+            </div>
+            
+            <!-- Animated scanner line -->
+            <div class="scanner-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container cta-container">
+      <h2>¿Listo para transformar la forma en que estacionas?</h2>
+      <p>Únete a miles de usuarios que ya ahorran tiempo y dinero con Parky.</p>
+      <a href="#" class="btn btn-secondary btn-large btn-cta-main">Comenzar Ahora</a>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-brand-col">
+      <a href="#" class="logo footer-logo">
+        <span class="logo-icon">P</span>
+        <span class="logo-text">Parky</span>
+      </a>
+      <p class="brand-tagline">
+        Revolucionando el estacionamiento urbano mediante Inteligencia Artificial y economía colaborativa.
+      </p>
+    </div>
+    
+    <div class="footer-links-grid">
+      <!-- Product Links -->
+      <div class="footer-col">
+        <h3>Producto</h3>
+        <ul>
+          <li><a href="#conductores">Para Conductores</a></li>
+          <li><a href="#propietarios">Para Propietarios</a></li>
+          <li><a href="#">Precios</a></li>
+          <li><a href="#tecnologia">Tecnología</a></li>
+        </ul>
+      </div>
+      
+      <!-- Support Links -->
+      <div class="footer-col">
+        <h3>Soporte</h3>
+        <ul>
+          <li><a href="#">Centro de Ayuda</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Términos de Servicio</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container footer-bottom">
+    <p class="copyright">© 2026 Parky. Todos los derechos reservados.</p>
+    
+    <div class="social-links">
+      <!-- Instagram -->
+      <a href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20">
+          <path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4A3.6,3.6 0 0,0 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6A3.6,3.6 0 0,0 16.4,4H7.6M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5Z"/>
+        </svg>
+      </a>
+      <!-- Twitter/X -->
+      <a href="#" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20">
+          <path fill="currentColor" d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.59,4 11.64,5.95 11.64,8.35C11.64,8.7 11.69,9.03 11.78,9.35C8.16,9.17 4.96,7.44 2.82,4.82C2.43,5.48 2.22,6.26 2.22,7.07C2.22,8.58 2.97,9.92 4.14,10.7C3.44,10.68 2.79,10.49 2.22,10.17C2.22,10.21 2.22,10.24 2.22,10.28C2.22,12.39 3.73,14.15 5.72,14.55C5.35,14.65 4.97,14.7 4.58,14.7C4.31,14.7 4.05,14.67 3.79,14.62C4.34,16.35 5.95,17.61 7.85,17.65C6.37,18.81 4.5,19.5 2.47,19.5C2.12,19.5 1.78,19.48 1.44,19.44C3.36,20.67 5.65,21.39 8.1,21.39C16.1,21.39 20.48,14.76 20.48,9.03C20.48,8.84 20.48,8.65 20.47,8.46C21.33,7.84 22.07,7.07 22.68,6.18L22.46,6Z"/>
+        </svg>
+      </a>
+      <!-- LinkedIn -->
+      <a href="#" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20">
+          <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
